@@ -1,0 +1,32 @@
+<%= stylesheet_link_tag 'stripe', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div id="cart-view-section" class="checkouts-page">
+  <div id="cart-view-container" class="checkouts-container">
+
+    <article>
+      <%- if flash[:error].present? %>
+      <div id="error-explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+      <% end %>
+    </article>
+
+    <div id="cart-view-content" class="checkouts-content">
+      <div id="cart-view">
+        <div id="cart-details">
+          <label class="amount">
+            <div id="cart-view-title" class="checkouts-page-title">
+              <h1>Purchase successful</h1>
+              <h2>You were successfully charged for your cookie order!</h2>
+            </div>
+          </label>
+        </div>
+
+        <form id="cart-actions" class="actions">
+          <%= link_to "LOGOUT", destroy_session_path(current_user), method: :delete, class: "logout" %>
+          <%= link_to "GO BACK TO MENU", menu_path %>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<div id="home-main-container">
+    
+  <div id="home-main-background"></div>
+  <div class="home-main">
+
+    <div id="toolbar-container">  
+      <img alt="Open" id="simple-menu" class="icon-menu" 
+           src="https://content.codecademy.com/projects/z2d/stories/menu-black.svg" />
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= link_to root_path do %>
+        <%= image_tag "fmf-logo-black.png", id: "logo", class: "icon-logo" %>
+      <% end %>
+    </div>
+
+    <div class="container">
+        <div class="content">
+          <h1>Fernando Maguina Fitness</h1>
+          <%= link_to about_url, class: "btn btn-primary" do %>
+            <p>Learn more</p>
+          <% end %>
+        </div>
+    </div>
+      
+  </div>
+</div>
+        
+<div class="home-supporting">
+  <div class="container">
+    <h2>"I will help you recover from injury whilst building a strong, lean and resilient body."</h2>
+    <p>Whether that means gaining the confidence to wear a two-piece at the beach after having their first child, fitting into the suit they always imagined they'd wear for their daughters' wedding, or the everyday confidence that permeates everything they do, installed through the effort they've put in at the studio.</p>
+  </div>
+</div>
+        
+<div class="home-secondary">
+  <div class="container">
+  </div>
+</div>
+
+<div class="home-about">
+  <div class="container">
+    <h2>Start the transformation</h2>
+    <%= link_to about_url, class: "btn btn-primary" do %>
+      <p>Learn more</p>
+    <% end %>
+  </div>
+</div>

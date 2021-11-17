@@ -1,0 +1,52 @@
+<div id="login-section" class="devise-page form-page session-main log small">
+
+  <div id="toolbar-container">  
+    <img alt="Open" id="simple-menu" class="icon-menu" 
+         src="https://content.codecademy.com/projects/z2d/stories/menu-black.svg" />
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= link_to root_path do %>
+      <%= image_tag "fmf-logo-black.png", id: "logo", class: "icon-logo" %>
+    <% end %>
+  </div>
+    
+  <div id="login-container" class="devise-container">
+
+    <div id="login-content" class="devise-content">
+      
+
+      <div class="container devise-page-title">
+        <h1>Members Only</h1>
+        <!--h2>Photo by <a href="https://unsplash.com/@sincerelymedia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sincerely Media</a> on <a href="https://unsplash.com/wallpapers/colors/blue?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a><h2-->
+        
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { :class => "form-section" }) do |f| %>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: 'email' %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "current-password" %>
+        </div>
+
+        <%- if devise_mapping.rememberable? %>
+        <div class="field checkbox">
+          <%= f.check_box :remember_me, class: "box" %>
+          <%= f.label :remember_me %>
+        </div>
+        <% end %>
+
+        <div class="submit">
+          <%= f.submit "LOG IN", :class => "btn btn-submit" %>
+        </div>
+        <% end %>
+        
+        <div class="devise-links">
+          <%= render "devise/shared/links" %>
+        </div>
+          
+      </div> 
+    </div>
+  </div>
+</div>

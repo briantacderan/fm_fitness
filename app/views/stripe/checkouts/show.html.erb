@@ -1,0 +1,41 @@
+<%= stylesheet_link_tag 'stripe', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<div id="cart-view-section" class="checkouts-page">
+  <div id="cart-view-container" class="checkouts-container">
+
+    <div id="cart-view-content" class="checkouts-content">
+      
+      <article>
+        <%- if flash[:error].present? %>
+        <div id="error-explanation">
+          <p><%= flash[:error] %></p>
+        </div>
+        <% end %>
+      </article>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
+      <div id="cart-view">
+
+        <div id="cart-details">
+          <label class="amount">
+            <div id="cart-view-title" class="checkouts-page-title">
+              <h1>Cart total</h1>
+              <h2>
+                <%= pretty_amount(@amount) unless @amount.nil? %>
+                <%= "Your cart is empty" if @amount.nil? %>
+              </h2>
+            </div>
+          </label>
+        </div>
+
+        <form id="cart-actions" class="actions">
+          <%= link_to "Checkout", stripe_finalize_path %>
+          <%= link_to "Delete all items", stripe_restart_path %>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>

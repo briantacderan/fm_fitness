@@ -1,0 +1,40 @@
+<div id="program-section" class="section">
+
+  <div id="toolbar-container">  
+    <img alt="Open" id="simple-menu" class="icon-menu" 
+         src="https://content.codecademy.com/projects/z2d/stories/menu-white.svg" />
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= link_to root_path do %>
+      <%= image_tag "fmf-logo-black.png", id: "logo", class: "icon-logo" %>
+    <% end %>
+  </div>
+
+  <div id="program-list">
+      
+    <h1 id="program-main-title">Fitness Programs</h1>
+    
+    <div id="program-container">
+        
+      <div id="solo-section" class="program-content">
+        <%= image_tag "1-on-1.png", id: "solo-img", class: "program-image" %>
+        <h1 id="solo-title" class="program-title">Personalized 1-on-1</h1>
+      </div>
+        
+      <div id="group-section" class="program-content">
+        <%= image_tag "group-training.png", id: "group-img", class: "program-image" %>
+        <h1 id="group-title" class="program-title">Group Session</h1>
+      </div>
+        
+      <div id="at-home-section" class="program-content">
+        <%= image_tag "online-pt.jpeg", id: "at-home-img", class: "program-image" %>
+        <h1 id="at-home-title" class="program-title">Remote Training</h1>
+      </div>
+        
+    </div>
+      
+    <div id="plan-container">
+    </div>
+
+  </div>
+</div>

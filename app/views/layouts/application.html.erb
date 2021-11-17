@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>FMtrainer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+      
+    <script src="//cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/jquery.sidr/2.2.1/jquery.sidr.min.js"></script>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <div id="sidr" class="menu sidr">
+          
+      <% if current_user %>
+      <ul>
+        <li class="email"><%= current_user.email %></li>
+        <li id="list-logo">
+          <%= link_to root_path do %>
+            <%= image_tag "fmf-logo-white.png", id: "logo", class: "icon-logo" %>
+          <% end %>
+        </li>
+        <li><%= link_to "Account", albums_path %></li>
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Programs", programs_path %></li>
+        <li><%= link_to "Log out", destroy_session_path(current_user), method: :delete, class: "logout" %></li>
+      </ul>
+      <% else %>
+      <ul>
+        <li id="list-logo">
+          <%= link_to root_path do %>
+            <%= image_tag "fmf-logo-white.png", id: "logo", class: "icon-logo" %>
+          <% end %>
+        </li>
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Programs", programs_path %></li>
+        <li><%= link_to "Sign up", overview_path %></li>
+        <li><%= link_to "Log in", user_session_path %></li>
+      </ul>
+      <% end %>
+    </div>
+
+    <%= yield %>
+
+    <footer>
+      <div class="container">
+        <p>&copy; FM Fitness | Brian Tacderan</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

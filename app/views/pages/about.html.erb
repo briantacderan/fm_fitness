@@ -1,0 +1,34 @@
+<div class="about-main"> 
+    
+  <div id="toolbar-container">  
+    <img alt="Open" id="simple-menu" class="icon-menu" 
+         src="https://content.codecademy.com/projects/z2d/stories/menu-black.svg" />
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= link_to root_path do %>
+      <%= image_tag "fmf-logo-black.png", id: "logo", class: "icon-logo" %>
+    <% end %>
+  </div>
+    
+  <div class="content container"> 
+    <h1 class="about-main-title">Personal workouts made for</h1> 
+    <h1 class="about-main-title"><strong>healthy living</strong> and <strong>fast results</strong></h1>
+  </div>
+    
+</div>
+
+<div class="about-supporting">
+  <div class="container">
+      <h2>It's time to put <u>you</u>rself <u>first</u></h2>
+    <p class="description">Start here! Sign up below to enroll in our completely free 7-day core strengthening program.</p>
+    
+    <p class="btn">
+      <% if current_user %>
+        <%= link_to "Start", overview_path %>
+      <% else %>
+        <%= link_to "Sign up", overview_path %>
+      <% end %>
+    </p>
+      
+  </div>
+</div>
