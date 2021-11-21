@@ -17,6 +17,7 @@
 
       <div class="container devise-page-title">
         <h1>Members Only</h1>
+        <!--%= local_time(schedule.start, format: '%e %b, %Y — %H:%M %P') %-->
         <!--h2>Photo by <a href="https://unsplash.com/@sincerelymedia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sincerely Media</a> on <a href="https://unsplash.com/wallpapers/colors/blue?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a><h2-->
         
         <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { :class => "form-section" }) do |f| %>

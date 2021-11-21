@@ -1,10 +1,7 @@
 class ProfileController < ApplicationController
   before_action :authenticate_user!
-  
-  def overview
+    
+  def show
   end
     
-  def schedule
-  end
-  
 end

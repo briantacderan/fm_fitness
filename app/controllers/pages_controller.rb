@@ -13,8 +13,5 @@ class PagesController < ApplicationController
     @group = Plan.where(program_id: 2)
     @nutrition = Plan.where(program_id: 3)
   end
-    
-  def testimonials
-  end
 
 end

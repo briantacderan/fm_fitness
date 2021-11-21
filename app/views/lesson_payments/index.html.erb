@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lesson Payments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Payment number</th>
+      <th>Status</th>
+      <th>Date</th>
+      <th>Cost</th>
+      <th>Service</th>
+      <th>Booking</th>
+      <th>Account</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lesson_payments.each do |lesson_payment| %>
+      <tr>
+        <td><%= lesson_payment.payment_number %></td>
+        <td><%= lesson_payment.status %></td>
+        <td><%= lesson_payment.date %></td>
+        <td><%= lesson_payment.cost %></td>
+        <td><%= lesson_payment.service %></td>
+        <td><%= lesson_payment.booking_id %></td>
+        <td><%= lesson_payment.account_id %></td>
+        <td><%= link_to 'Show', lesson_payment %></td>
+        <td><%= link_to 'Edit', edit_lesson_payment_path(lesson_payment) %></td>
+        <td><%= link_to 'Destroy', lesson_payment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lesson Payment', new_lesson_payment_path %>

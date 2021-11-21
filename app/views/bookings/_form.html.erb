@@ -1,0 +1,67 @@
+<%= form_with(model: booking) do |form| %>
+  <% if booking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
+
+      <ul>
+        <% booking.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cost %>
+    <%= form.number_field :cost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start %>
+    <%= form.datetime_select :start %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cancellation_reason %>
+    <%= form.text_area :cancellation_reason %>
+  </div>
+
+  <div class="field">
+    <%= form.label :refunded %>
+    <%= form.check_box :refunded %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trainer_id %>
+    <%= form.number_field :trainer_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :schedule_id %>
+    <%= form.number_field :schedule_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lesson_id %>
+    <%= form.number_field :lesson_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :account_id %>
+    <%= form.number_field :account_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

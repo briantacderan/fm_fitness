@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Payment number:</strong>
+  <%= @lesson_payment.payment_number %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @lesson_payment.status %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @lesson_payment.date %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @lesson_payment.cost %>
+</p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @lesson_payment.service %>
+</p>
+
+<p>
+  <strong>Booking:</strong>
+  <%= @lesson_payment.booking_id %>
+</p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @lesson_payment.account_id %>
+</p>
+
+<%= link_to 'Edit', edit_lesson_payment_path(@lesson_payment) %> |
+<%= link_to 'Back', lesson_payments_path %>

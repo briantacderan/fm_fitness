@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @lesson.image %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @lesson.title %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @lesson.duration %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @lesson.cost %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @lesson.category %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @lesson.language %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @lesson.level %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @lesson.description %>
+</p>
+
+<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+<%= link_to 'Back', lessons_path %>
+
+<%= link_to custom_url(:lesson_id => @lesson.id), class: "course-btn" do %>
+  <i class="fa fa-calendar-plus-o"></i> Book This Lesson
+<% end %>

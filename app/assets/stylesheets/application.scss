@@ -183,8 +183,8 @@ p.notice {
 
 #toolbar-container img.icon-logo {
   margin: 1.5rem 1.5rem 0 0;
-  width: 150px;
-  height: 40px;
+  width: 100px;
+  height: auto;
 }
 
 img.icon-logo:hover {
@@ -350,6 +350,12 @@ img.icon-logo:hover {
 }
 
 @media only screen and (max-width: 650px) {
+  #toolbar-container img.icon-logo {
+    margin: 1.5rem 1.5rem 0 0;
+    width: 55px;
+    height: auto;
+  }  
+    
   .home-main img.icon-menu,
   .home-main img.icon-close {
     filter: invert(0%) sepia(100%) saturate(32%) hue-rotate(270deg) brightness(100%) contrast(101%);

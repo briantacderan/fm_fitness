@@ -1,0 +1,52 @@
+<%= form_with(model: lesson_payment) do |form| %>
+  <% if lesson_payment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lesson_payment.errors.count, "error") %> prohibited this lesson_payment from being saved:</h2>
+
+      <ul>
+        <% lesson_payment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :payment_number %>
+    <%= form.text_field :payment_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cost %>
+    <%= form.number_field :cost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :service %>
+    <%= form.text_field :service %>
+  </div>
+
+  <div class="field">
+    <%= form.label :booking_id %>
+    <%= form.number_field :booking_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :account_id %>
+    <%= form.number_field :account_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
