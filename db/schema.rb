@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2021_11_21_123554) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "bookings", force: :cascade do |t|
     t.string "status"
     t.string "title"
