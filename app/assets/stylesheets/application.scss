@@ -73,6 +73,11 @@ html {
   cursor: pointer;
 }
 
+.session-main .btn.btn-submit#btn-long {
+  max-width: 400px;
+  padding: 0.25rem;
+}
+
 img.icon-close,
 img.icon-menu {
   width: 1.5rem;
@@ -855,10 +860,8 @@ footer .container {
   align-items: center;
 }
 
-footer p {
+footer a {
   color: rgb(170, 170, 170);
-  font-size: 0.75rem;
-  text-transform: uppercase;
 }
 
 @media only screen and (max-width: 450px) {
