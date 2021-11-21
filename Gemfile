@@ -63,3 +63,4 @@ gem 'dotenv-rails', :groups => [:development, :test]
 # Local time gem for scheduling
 gem 'local_time'
 gem 'carrierwave', '~> 2.0'
+gem 'amoeba'
