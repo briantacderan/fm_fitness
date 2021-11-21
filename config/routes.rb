@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  resources :lesson_payments
-  resources :bookings
-  resources :schedules
-  resources :clients
-  resources :trainers
-  resources :lessons
-  resources :account
+  # resources :lesson_payments
+  # resources :bookings
+  # resources :schedules
+  # resources :clients
+  # resources :trainers
+  # resources :lessons
+  # resources :account
   devise_for :users
   resources :pages
   root 'pages#home'
